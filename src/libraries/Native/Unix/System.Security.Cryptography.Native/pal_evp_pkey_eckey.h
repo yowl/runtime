@@ -5,7 +5,7 @@
 #include "pal_types.h"
 #include "pal_compiler.h"
 #include "opensslshim.h"
-
+extern "C" {
 /*
 Shims the EVP_PKEY_get1_EC_KEY method.
 
@@ -20,3 +20,4 @@ instance on the EVP_KEY.
 Returns 1 upon success, otherwise 0.
 */
 PALEXPORT int32_t CryptoNative_EvpPkeySetEcKey(EVP_PKEY* pkey, EC_KEY* key);
+}

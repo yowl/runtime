@@ -3,7 +3,6 @@
 // See the LICENSE file in the project root for more information.
 
 #include "pal_evp_pkey_eckey.h"
-
 EC_KEY* CryptoNative_EvpPkeyGetEcKey(EVP_PKEY* pkey)
 {
     return EVP_PKEY_get1_EC_KEY(pkey);
